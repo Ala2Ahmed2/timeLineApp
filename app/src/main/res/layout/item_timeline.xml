@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@color/white">
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/Guideline1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/Guideline2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="685dp" />
+
+        <ImageView
+            android:id="@+id/profile_img"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="14dp"
+            android:src="@drawable/profile_img"
+            app:layout_constraintBottom_toTopOf="@+id/post_tv"
+            app:layout_constraintStart_toStartOf="@id/Guideline1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="5dp"
+            android:text="Unblast"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/time_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/profile_img"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="1dp"
+            android:drawableRight="@drawable/ic_globe"
+            android:text="2 hrs ."
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/post_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/profile_img"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/options_img"
+            android:layout_width="27dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="97dp"
+            android:src="@drawable/ic_menu"
+            app:layout_constraintBottom_toTopOf="@+id/post_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.927"
+            app:layout_constraintStart_toEndOf="@+id/name_tv"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/post_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="46dp"
+            android:text="@string/postTxt"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/post_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/Guideline1"
+            app:layout_constraintTop_toBottomOf="@+id/time_tv"
+            app:layout_constraintVertical_bias="0.656" />
+
+        <TextView
+            android:id="@+id/link_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"
+            android:text="@string/postLink"
+            android:textColor="@color/blue"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/post_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/Guideline1"
+            app:layout_constraintTop_toBottomOf="@+id/post_tv" />
+
+        <ImageView
+            android:id="@+id/post_img"
+            android:layout_width="412dp"
+            android:layout_height="409dp"
+            android:layout_marginTop="144dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/photo"
+            app:layout_constraintBottom_toTopOf="@+id/Guideline2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.287" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="13dp"
+            android:backgroundTint="#f9c706"
+            app:cardCornerRadius="250dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_share"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.92"
+            app:layout_constraintStart_toStartOf="@+id/Guideline1"
+            app:layout_constraintTop_toBottomOf="@+id/post_img"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/arrow_ic"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="13dp"
+            android:src="@drawable/ic_arrow_down"
+            app:layout_constraintBottom_toTopOf="@+id/btn_share"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/cardView2"
+            app:layout_constraintTop_toBottomOf="@+id/post_img"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/share_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="1 share"
+            android:textColor="#595959"
+            app:layout_constraintBottom_toTopOf="@+id/btn_share"
+            app:layout_constraintEnd_toStartOf="@+id/cardView2"
+            app:layout_constraintHorizontal_bias="0.963"
+            app:layout_constraintStart_toStartOf="@+id/Guideline1"
+            app:layout_constraintTop_toBottomOf="@+id/post_img"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/like_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="14dp"
+            android:drawableLeft="@drawable/ic_like_blue"
+            android:text=" 12"
+            android:textColor="#595959"
+            app:layout_constraintBottom_toTopOf="@+id/btn_like"
+            app:layout_constraintEnd_toStartOf="@+id/cardView2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/Guideline1"
+            app:layout_constraintTop_toBottomOf="@+id/post_img"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/btn_like"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/white"
+            android:drawableLeft="@drawable/ic_like"
+            android:text="Like"
+            android:textColor="#BA595959"
+            android:textSize="15sp"
+            app:cornerRadius="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/Guideline2"
+            app:layout_constraintEnd_toStartOf="@+id/btn_comment"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/post_img"
+            app:layout_constraintVertical_bias="0.941" />
+
+        <Button
+            android:id="@+id/btn_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="@color/white"
+            android:drawableLeft="@drawable/ic_comment"
+            android:text="Comment"
+            android:textColor="#BA595959"
+            android:textSize="15sp"
+            app:cornerRadius="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/Guideline2"
+            app:layout_constraintEnd_toStartOf="@+id/btn_share"
+            app:layout_constraintStart_toEndOf="@+id/btn_like"
+            app:layout_constraintTop_toBottomOf="@+id/post_img"
+            app:layout_constraintVertical_bias="0.94" />
+
+        <Button
+            android:id="@+id/btn_share"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="72dp"
+            android:backgroundTint="@color/white"
+            android:drawableLeft="@drawable/ic_share"
+            android:text="Share"
+            android:textColor="#BA595959"
+            android:textSize="15sp"
+            app:cornerRadius="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/Guideline2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_comment"
+            app:layout_constraintTop_toBottomOf="@+id/post_img"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
