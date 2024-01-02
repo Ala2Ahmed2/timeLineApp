@@ -25,11 +25,11 @@ class TimelineAdapter (val postList: List<Post>?) : RecyclerView.Adapter<Timelin
             profileImg.setImageResource(post.profileImgId)
             postImg.setImageResource(post.postImgId)
             userName.text = post.name
-            postTxt.text = post.text
-            postTime.text = post.time.toString()
-            postLike.text = post.likeCount.toString()
-            postShare.text = post.shareCount.toString()
-            postLink.text = post.link
+            postTxt.text = post.text.toString()
+            postTime.text = post.time
+            postLike.text = post.likeCount
+            postShare.text = post.shareCount
+            postLink.text = post.link.toString()
         }
     }
 
